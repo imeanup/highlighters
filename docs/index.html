@@ -1,114 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Highlighter Support</title>
-    <meta name="description" content="A simple browser extension that highlights text and allows quick annotations." />
+    <meta name="theme-color" content="#0d6efd" />
+    <title>Highlighter Support — Lightweight annotation & highlights</title>
+    <meta name="description" content="Highlighter Support — a compact browser extension for highlighting, quick annotations and saving snippets." />
 
-    <!-- Bootstrap CSS (via jsDelivr CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome 6 (via cdnjs) -->
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Site overrides -->
-    <link rel="stylesheet" href="css/home.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css"/>
 </head>
-
 <body>
-    <header class="py-5">
+    <header class="site-header">
         <div class="container">
-        <div class="p-4 p-md-5 bg-body-tertiary border rounded-3">
-            <h1 class="mb-2">Highlighter Support</h1>
-            <p class="lead text-muted mb-3">A simple browser extension that highlights text and allows quick annotations.</p>
-            <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-outline-secondary btn-help" href="help.html" aria-label="Open help guide">
-                <i class="fa-solid fa-circle-info me-2" aria-hidden="true"></i>
-                <span>Help Guide</span>
-            </a>
-            <a class="btn btn-sponsor" href="donate.html" aria-label="Donate or Sponsor">
-                <i class="fa-solid fa-heart me-2" aria-hidden="true"></i>
-                <span>Sponsor</span>
-            </a>
-            <a class="btn btn-outline-primary" href="https://github.com/imeanup/highlighter-support">
-                <i class="fa-brands fa-github me-2" aria-hidden="true"></i>
-                <span>View Repository</span>
-            </a>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <div class="d-flex align-items-center gap-3">
+            <div class="rounded-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px;background:linear-gradient(135deg,#0d6efd22,#00c9a722);">
+                <i class="fa-solid fa-highlighter" style="color:var(--accent);"></i>
+            </div>
+            <div>
+                <strong>Highlighter Support</strong>
+                <div class="text-muted small">Lightweight highlights & quick notes</div>
+            </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+            <a class="btn btn-outline-secondary" href="help.html" aria-label="Open help guide"><i class="fa-solid fa-circle-info me-2"></i>Help</a>
+            <a class="btn btn-sponsor" href="donate.html" aria-label="Donate or Sponsor"><i class="fa-solid fa-heart me-2"></i>Sponsor</a>
+            <a class="btn btn-outline-primary" href="https://github.com/imeanup/highlighter-support" aria-label="Open GitHub repository"><i class="fa-brands fa-github me-2"></i>GitHub</a>
             </div>
         </div>
+
+        <div class="hero">
+            <div style="flex:1;min-width:220px">
+            <div class="kicker">Chrome extension</div>
+            <h1>Multi‑color highlights across tabs.</h1>
+            <p class="lead-muted">Built for Manifest V3, this lightweight, fast highlighter marks text in multiple colors across multiple tabs, with a quick toggle to turn highlighting on/off or reset it whenever needed.</p>
+
+            <div class="d-flex align-items-center cta-row mt-3">
+                <a class="btn btn-outline-secondary" href="help.html">How it works</a>
+                <a class="btn btn-link text-decoration-none ms-2" href="#features">See features</a>
+            </div>
+
+            <div class="mt-3 text-muted small">Available as a simple unpacked extension. Works on all major Chromium-based browsers.</div>
+            </div>
+
+            <div class="d-none d-md-block text-center" aria-hidden="true">
+            </div>
         </div>
-    </header>   
 
-    <main class="container pb-5">
-        <div class="row g-3">
-        <section class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-            <div class="card-body">
-                <h2 class="h5 card-title">What it does</h2>
-                <p class="card-text">Highlight selected text on any web page and save those highlights for later reference without extra clutter.</p>
-                <ul class="mb-0">
-                <li>Highlight selected text instantly</li>
-                <li>Attach quick annotations</li>
-                <li>Lightweight and easy to use</li>
-                </ul>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <section id="features" class="mb-4">
+        <div class="row align-items-start g-4">
+            <div class="col-12 col-lg-6">
+            <h2 class="h3 mb-2">Why choose Highlighter Support?</h2>
+            <p class="text-muted">Designed to be fast and unobtrusive — it focuses on the essentials: highlighting, short annotations, and quick recall. Ideal for research, reading and bookmarking small snippets.</p>
+
+            <div class="grid-features mt-3">
+                <div class="card p-3 feature-card">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="fa-stack" style="background:#f0f8ff;padding:8px;color:var(--accent)"><i class="fa-solid fa-pen-to-square fa-lg"></i></div>
+                    <div>
+                    <strong>Simple annotations</strong>
+                    <div class="text-muted small">Add short notes tied to highlights.</div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="card p-3 feature-card">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="fa-stack" style="background:#fff4f7;padding:8px;color:var(--sponsor)"><i class="fa-solid fa-heart fa-lg"></i></div>
+                    <div>
+                    <strong>Minimal & lightweight</strong>
+                    <div class="text-muted small">No heavy background services or tracking.</div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="card p-3 feature-card">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="fa-stack" style="background:#eef9f1;padding:8px;color:#07b36a"><i class="fa-solid fa-fw fa-layer-group fa-lg"></i></div>
+                    <div>
+                    <strong>Organize quickly</strong>
+                    <div class="text-muted small">Group and recall highlights with multi-color.</div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="card p-3 feature-card">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="fa-stack" style="background:#fff8e6;padding:8px;color:#ffb703"><i class="fa-solid fa-fw fa-clock-rotate-left fa-lg"></i></div>
+                    <div>
+                    <strong>Workspace-friendly</strong>
+                    <div class="text-muted small">Works across tabs with minimal friction.</div>
+                    </div>
+                </div>
+                </div>
             </div>
             </div>
-        </section>
 
-        <section class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-            <div class="card-body">
-                <h2 class="h5 card-title">Get started</h2>
-                <ol>
-                <li>Install the extension from the Chrome extensions panel (Developer mode).</li>
-                <li>Select text on any page and choose “Highlight”.</li>
-                <li>Open the extension popup to review or annotate highlights.</li>
+            <aside class="col-12 col-lg-6">
+            <div class="card p-3 h-100">
+                <div class="card-body">
+                <h3 class="h5">Get started — quick steps</h3>
+                <ol class="mt-3">
+                    <li>Download the extension in your browser from chrome extensions store.</li>
+                    <li>Select text on any web page, then choose <strong>Highlight</strong> from the extension popup or context menu.</li>
+                    <li>Open the popup to view your multi colored highlighted text.</li>
                 </ol>
-                <p class="mb-0">Need details? Read the <a href="help.html">Help Guide</a>.</p>
-            </div>
-            </div>
-        </section>
 
-        <section class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-            <div class="card-body">
-                <h2 class="h5 card-title">Support the project</h2>
-                <p>If this extension helps, consider a small contribution to support maintenance and improvements.</p>
-                <a class="btn btn-sponsor" href="donate.html">
-                <i class="fa-solid fa-heart me-2" aria-hidden="true"></i>
-                Donate / Sponsor
-                </a>
-            </div>
-            </div>
-        </section>
+                <div id="get-started" class="mt-3">
+                    <a class="btn btn-outline-secondary" href="help.html">Full help</a>
+                </div>
 
-        <section class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-            <div class="card-body">
-                <h2 class="h5 card-title">License</h2>
-                <p>This project is released under the GPL-3.0 License.</p>
-                <p class="mb-0"><a class="text-decoration-none" href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">View LICENSE file</a></p>
+                <hr>
+
+                <div class="small text-muted">
+                    <strong>License:</strong> GPL‑3.0 • <a href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">View on GitHub</a>
+                </div>
+                </div>
             </div>
-            </div>
-        </section>
+            </aside>
         </div>
+        </section>
+
+        <section class="mt-4">
+        <div class="row g-3">
+            <div class="col-12 col-md-6">
+            <div class="card feature-card p-3">
+                <div class="card-body">
+                    <h4 class="h6">Developer support & issues</h4>
+                    <p class="text-muted small mb-2">This repository contains support materials, documentation, and issue templates. This repository is provided so developers and users can report issues, request features, or contribute documentation and localization.</p>
+                    <p class="small mb-2">How developers can help:</p>
+                    <ul class="small mb-2">
+                        <li>Open issues to report bugs or request features.</li>
+                        <li>Submit documentation or example snippets via pull requests to this support repository.</li>
+                        <li>Use issues to track discussions; maintainers will respond with guidance.</li>
+                    </ul>
+                    <div class = "small">
+                        <a href="https://github.com/imeanup/highlighter-support/issues"
+                            class="text-decoration-none">Open an issue on the support repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+            <div class="card feature-card p-3">
+                <div class="card-body">
+                <h4 class="h6">Support the project</h4>
+                <p class="text-muted small mb-2">If you find this useful, sponsorship helps with upkeep and small feature work.</p>
+                <a class="btn btn-sponsor" href="donate.html"><i class="fa-solid fa-heart me-2"></i>Donate</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
     </main>
 
-    <footer class="border-top py-3 bg-body-tertiary">
-        <div class="container d-grid gap-2 gap-md-0" style="grid-template-columns: 1fr; align-items: center;">
-        <div class="text-muted">
-            <span>&copy; 2025 imeanup</span>
-            <span> • </span>
-            <a class="text-muted text-decoration-none" href="https://github.com/imeanup/highlighter-support">Repo</a>
-            <span> • </span>
-            <a class="text-muted text-decoration-none" href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">GPL-3.0</a>
+    <footer class="footer container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+        <div class="small text-muted">© 2025 imeanup • <a href="https://github.com/imeanup/highlighter-support">Repository</a> • <a href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">GPL‑3.0</a></div>
+        <div class="mt-2 mt-md-0">
+            <a class="btn btn-sm btn-outline-secondary me-2" href="https://github.com/imeanup/highlighter-support" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a class="btn btn-sm btn-outline-secondary" href="help.html" aria-label="Help"><i class="fa-solid fa-circle-info"></i></a>
         </div>
-        <div class="text-muted">Served via GitHub Pages</div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS bundle (Popper included) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Small enhancement: keep keyboard focus visible and enable reduced motion respect
+        (function(){
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        document.querySelectorAll('.feature-card').forEach(el=>{
+            el.style.transition = 'transform .18s ease, box-shadow .18s ease';
+        });
+        })();
+    </script>
 </body>
 </html>
