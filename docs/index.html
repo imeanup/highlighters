@@ -5,81 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Highlighter Support</title>
     <meta name="description" content="A simple browser extension that highlights text and allows quick annotations." />
+
+    <!-- Bootstrap CSS (via jsDelivr CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 (via cdnjs) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Site overrides -->
     <link rel="stylesheet" href="css/home.css" />
 </head>
 
 <body>
-    <header>
-        <div class="container hero">
-            <h1>Highlighter Support</h1>
-            <p class="tagline">A simple browser extension that highlights text and allows quick annotations.</p>
-            <div class="cta">
-                <a class="btn btn-help" href="help.html" aria-label="Open help guide">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <span>Help Guide</span>
-                </a>
-                
-                <a class="btn btn-sponsor" href="donate.html" aria-label="Donate or Sponor">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                    </svg>
-                    <span>Sponsor</span>
-                </a>
+    <header class="py-5">
+        <div class="container">
+        <div class="p-4 p-md-5 bg-body-tertiary border rounded-3">
+            <h1 class="mb-2">Highlighter Support</h1>
+            <p class="lead text-muted mb-3">A simple browser extension that highlights text and allows quick annotations.</p>
+            <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary btn-help" href="help.html" aria-label="Open help guide">
+                <i class="fa-solid fa-circle-info me-2" aria-hidden="true"></i>
+                <span>Help Guide</span>
+            </a>
+            <a class="btn btn-sponsor" href="donate.html" aria-label="Donate or Sponsor">
+                <i class="fa-solid fa-heart me-2" aria-hidden="true"></i>
+                <span>Sponsor</span>
+            </a>
+            <a class="btn btn-outline-primary" href="https://github.com/imeanup/highlighter-support">
+                <i class="fa-brands fa-github me-2" aria-hidden="true"></i>
+                <span>View Repository</span>
+            </a>
             </div>
         </div>
-    </header>
+        </div>
+    </header>   
 
-    <main class="container">
-        <div class="grid">
-        <section class="card">
-            <h2>What it does</h2>
-            <p>Highlight selected text on any web page and save those highlights for later reference without extra clutter.</p>
-            <ul>
-            <li>Highlight selected text instantly</li>
-            <li>Attach quick annotations</li>
-            <li>Lightweight and easy to use</li>
-            </ul>
+    <main class="container pb-5">
+        <div class="row g-3">
+        <section class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 card-title">What it does</h2>
+                <p class="card-text">Highlight selected text on any web page and save those highlights for later reference without extra clutter.</p>
+                <ul class="mb-0">
+                <li>Highlight selected text instantly</li>
+                <li>Attach quick annotations</li>
+                <li>Lightweight and easy to use</li>
+                </ul>
+            </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Get started</h2>
-            <ol>
-            <li>Install the extension from the Chrome extensions panel (Developer mode).</li>
-            <li>Select text on any page and choose “Highlight”.</li>
-            <li>Open the extension popup to review or annotate highlights.</li>
-            </ol>
-            <p>Need details? Read the <a href="help.html">Help Guide</a>.</p>
+        <section class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 card-title">Get started</h2>
+                <ol>
+                <li>Install the extension from the Chrome extensions panel (Developer mode).</li>
+                <li>Select text on any page and choose “Highlight”.</li>
+                <li>Open the extension popup to review or annotate highlights.</li>
+                </ol>
+                <p class="mb-0">Need details? Read the <a href="help.html">Help Guide</a>.</p>
+            </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Support the project</h2>
-            <p>If this extension helps, consider a small contribution to support maintenance and improvements.</p>
-            <p><a class="btn" href="donate.html">Donate / Sponsor</a></p>
+        <section class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 card-title">Support the project</h2>
+                <p>If this extension helps, consider a small contribution to support maintenance and improvements.</p>
+                <a class="btn btn-sponsor" href="donate.html">
+                <i class="fa-solid fa-heart me-2" aria-hidden="true"></i>
+                Donate / Sponsor
+                </a>
+            </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>License</h2>
-            <p>This project is released under the GPL-3.0 License.</p>
-            <p><a class="mono" href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">View LICENSE file</a></p>
+        <section class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 card-title">License</h2>
+                <p>This project is released under the GPL-3.0 License.</p>
+                <p class="mb-0"><a class="text-decoration-none" href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">View LICENSE file</a></p>
+            </div>
+            </div>
         </section>
         </div>
     </main>
 
-    <footer>
-        <div class="container foot-grid">
-        <div>
+    <footer class="border-top py-3 bg-body-tertiary">
+        <div class="container d-grid gap-2 gap-md-0" style="grid-template-columns: 1fr; align-items: center;">
+        <div class="text-muted">
             <span>&copy; 2025 imeanup</span>
             <span> • </span>
-            <a href="https://github.com/imeanup/highlighter-support">Repo</a>
+            <a class="text-muted text-decoration-none" href="https://github.com/imeanup/highlighter-support">Repo</a>
             <span> • </span>
-            <a href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">GPL-3.0</a>
+            <a class="text-muted text-decoration-none" href="https://github.com/imeanup/highlighter-support/blob/main/LICENSE">GPL-3.0</a>
         </div>
-        <div>Served via GitHub Pages</div>
+        <div class="text-muted">Served via GitHub Pages</div>
         </div>
     </footer>
-</body>
 
+    <!-- Bootstrap JS bundle (Popper included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
